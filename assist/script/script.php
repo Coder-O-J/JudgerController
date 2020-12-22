@@ -5,7 +5,7 @@
 class JudgerServer
 {
     public $DB = "assist/db/db.json";
-    public $JudgerUrl = "https://github.com/Coder-O-J/Judger";
+    public $JudgerUrl = "https://github.com/coderoj-dev/Judger";
 
     public function __construct()
     {
