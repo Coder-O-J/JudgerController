@@ -5,7 +5,7 @@
 class JudgerServer
 {
     public $DB = "assist/db/db.json";
-    public $JudgerUrl = "https://github.com/Coder-O-J/Judger";
+    public $JudgerUrl = "https://github.com/coderoj-dev/Judger";
 
     public function __construct()
     {
@@ -21,6 +21,7 @@ class JudgerServer
 
     public function updateDB($data)
     {
+        exec("chmod -R 777 assist");
         file_put_contents($this->DB, json_encode($data));
     }
 
@@ -68,8 +69,8 @@ class JudgerServer
 
         $judgerPath = "judger/$newJudgerName";
 
+        exec("chmod -R 777 judger");
         $response = shell_exec("git clone ".$this->JudgerUrl." $judgerPath");
-        exec("chmod -R 777 $judgerPath");
 
         $data[$newJudgerName] = [
             'name'    => $newJudgerName,

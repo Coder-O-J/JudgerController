@@ -1,5 +1,5 @@
 <?php 
-	include "assist/script/script.php";
+	include "script/script.php";
 	$JudgerServer = new JudgerServer();
 
 	if(isset($_GET['judgerList'])){
